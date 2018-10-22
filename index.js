@@ -8,9 +8,7 @@ const FORM_FIRSTNAME_SELECTOR = "#comp-jnhlf2psinput";
 const FORM_LASTNAME_SELECTOR = "#comp-jnhlf2pzinput";
 const FORM_PHONE_SELECTOR = "#comp-jnhlf2qainput";
 const FORM_AGB_SELECTOR = "#comp-jnhlf2qminput";
-const FORM_SUBMIT_SELECTOR = "#comp-jnhlf2qxlink";
-
-const FORM_MESSAGE = "Die dritte Regel des Boxclubs lautet: Wer einen Nazi sieht, muss ihn umboxen!";
+const FORM_SUBMIT_SELECTOR = "#comp-jnhlf2qxlink"
 
 async function fillForm(page) {
 	faker.locale = "de";
@@ -28,7 +26,7 @@ async function fillForm(page) {
 	await page.keyboard.type(`${faker.phone.phoneNumber()}`);
 
 	await page.click(FORM_MESSAGE_SELECTOR);
-	await page.keyboard.type(FORM_MESSAGE);
+	await page.keyboard.type(`${faker.lorem.paragraph()}`);
 
 	await page.click(FORM_AGB_SELECTOR);
 
