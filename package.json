@@ -1,0 +1,16 @@
+{
+  "name": "umDOSen",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Thorben Dittmar <roikiermedia@users.noreply.github.com>",
+  "private": true,
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "faker": "^4.1.0",
+    "puppeteer": "^1.9.0"
+  }
+}
