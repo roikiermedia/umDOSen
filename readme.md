@@ -14,3 +14,6 @@ npm start
 ```
 
 Take a look at `index.js` to customize the target form.
+
+## Disclaimer 
+Dies ist ein experimentelles Projekt. Es gelten die Bedingungen der MIT-Lizenz.
