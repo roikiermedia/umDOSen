@@ -32,8 +32,13 @@ async function fillForm(page) {
 
 	await page.click(FORM_AGB_SELECTOR);
 
+	msleep(250);
 	await page.click(FORM_SUBMIT_SELECTOR);
-	setTimeout(fillForm(page), 3000);
+	msleep(500);
+}
+
+function msleep(n) {
+  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, n);
 }
 
 (async () => {
@@ -41,7 +46,11 @@ async function fillForm(page) {
   const page = await browser.newPage();
 	await page.goto(FORM_SITE);
 
-	fillForm(page);
+	msleep(1000);
+
+	while (true) {
+		await fillForm(page);
+	}
 
   // await browser.close();
 })();
